@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 const HomePage = () => {
-    const [depatureCode, setDepartureCode] = useState('');
+    const [departureCode, setDepartureCode] = useState('');
     const [arrivalCode, setArrivalCode] = useState('');
-    const [depatureDate, setDepartureDate] = useState('');
+    const [departureDate, setDepartureDate] = useState('');
     const [numAdults, setNumAdults] = useState('1');
-    const [serachResult, setSearchResults] = useState(null);
+    const [searchResult, setSearchResults] = useState(null);
 
     const handleSearch = async (e) => {
         e.preventDefault();
         //handle  search based on criteria 
-        console.log("search criteria: ", { depatureCode, arrivalCode, depatureDate, numAdults });
+        console.log("search criteria: ", { departureCode, arrivalCode, depatureDate, numAdults });
         //add api request logic
 
         const apiUrl = `/apiflights/${departureCode}/${arrivalCode}/${departureDate}/${numAdults}/2`;
@@ -72,7 +72,7 @@ const HomePage = () => {
                 <button type="submit">Search Flights</button>
             </form>
 
-            {searchResults && (
+            {searchResult && (
                 <div>
                     <h2>Search Results</h2>
                     {/* Display search results as needed */}
