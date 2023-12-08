@@ -10,7 +10,7 @@ const HomePage = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         //handle  search based on criteria 
-        console.log("search criteria: ", { departureCode, arrivalCode, depatureDate, numAdults });
+        console.log("search criteria: ", { departureCode, arrivalCode, departureDate, numAdults });
         //add api request logic
 
         const apiUrl = `/apiflights/${departureCode}/${arrivalCode}/${departureDate}/${numAdults}/2`;
@@ -34,7 +34,7 @@ const HomePage = () => {
                     type='text'
                     id='departureCode'
                     placeholder='LAX'
-                    value={depatureCode}
+                    value={departureCode}
                     onChange={(e) => setDepartureCode(e.target.value)}>Required</input>
 
 
@@ -52,7 +52,7 @@ const HomePage = () => {
                     type='date'
                     id='departureDate'
                     name='departureDate'
-                    value={depatureDate}
+                    value={departureDate}
                     onChange={(e) => setDepartureDate(e.target.value)}>Required</input>
 
                 <label htmlFor="numAdults">Number of Adults:</label>
