@@ -5,7 +5,7 @@
 .Center {
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
+  text-align: center;
 }
 
 .App-logo {
@@ -30,8 +30,9 @@
 
 body {
   box-sizing: border-box;
-  color: #220f5f;
+  color: black;
   font-family:  sans-serif;
+  text-align: center;
 }
 
 .container {
@@ -56,13 +57,13 @@ tr th {
   font-size: 18px;
   padding: 12px;
   border: 1px solid #eeeeee;
-  text-align: left;
+  /* text-align: left; */
   background-color: rgba(217, 221, 146, 0.2);
 }
 
 tr td {
   border: 1px solid #eeeeee;
-  text-align: left;
+  /* text-align: left; */
   padding:  10px;
 }
 
@@ -70,12 +71,12 @@ input {
   font-size: 16px;
   background-color: transparent;
   border: none;
-  width: 91%;
+  width: 15%;
   padding: 12px 12px;
   font-family:  sans-serif;
 }
 
 input:focus {
-  outline: 1px solid #ccc;
-  border: 1px solid #ccc;
+  outline: 1px solid rgb(73, 155, 227);
+  border: 1px solid rgb(73, 155, 227);
 }
