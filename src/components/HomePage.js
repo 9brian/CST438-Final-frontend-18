@@ -27,35 +27,40 @@ const HomePage = () => {
 
     return (
         <div>
-            <h1>Flight search</h1>
+            <h1> ✈️ Flight Search </h1>
             <form onSubmit={handleSearch}>
-                <label htmlFor='departureCode'>Departure Airport Code:</label>
+                <label htmlFor='departureCode'>Departure Airport Code:    </label>
                 <input
                     type='text'
                     id='departureCode'
                     placeholder='LAX'
                     value={departureCode}
-                    onChange={(e) => setDepartureCode(e.target.value)}>Required</input>
-
-
-                <label htmlFor='arrivalCode'>Arrival Airport Code: </label>
+                    onChange={(e) => setDepartureCode(e.target.value)}
+                    Required 
+                />
+                <br></br>
+                <label htmlFor='arrivalCode'>Arrival Airport Code:    </label>
                 <input
                     type='text'
                     id='arrivalCode'
                     name='arrivalCode'
                     placeholder='JFK'
                     value={arrivalCode}
-                    onChange={(e) => setArrivalCode(e.target.value)}>Required</input>
-
-                <label htmlFor='departureDate'> Departure Date: </label>
+                    onChange={(e) => setArrivalCode(e.target.value)}
+                    Required
+                />
+                <br></br>
+                <label htmlFor='departureDate'> Departure Date:    </label>
                 <input
                     type='date'
                     id='departureDate'
                     name='departureDate'
                     value={departureDate}
-                    onChange={(e) => setDepartureDate(e.target.value)}>Required</input>
-
-                <label htmlFor="numAdults">Number of Adults:</label>
+                    onChange={(e) => setDepartureDate(e.target.value)}
+                    Required
+                />
+                <br></br>
+                <label htmlFor="numAdults">Number of Adults:   </label>
                 <select
                     id="numAdults"
                     name="numAdults"
@@ -68,7 +73,8 @@ const HomePage = () => {
                     <option value="3">3</option>
                     {/* Add more options as needed */}
                 </select>
-
+                <br></br>
+                <br></br>
                 <button type="submit">Search Flights</button>
             </form>
 
@@ -77,7 +83,7 @@ const HomePage = () => {
                     <h2>Search Results</h2>
                     {/* Display search results as needed */}
                     {/* You can map through the results and render them */}
-                    {searchResults.map((result) => (
+                    {searchResult.map((result) => (
                         <div key={result.id}>
                             {/* Render flight details */}
                             <p>Flight ID: {result.id}</p>
@@ -90,4 +96,6 @@ const HomePage = () => {
         </div>
 
     )
-}
+};
+
+export default HomePage;
