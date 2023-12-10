@@ -7,23 +7,25 @@ const HomePage = () => {
     const [numAdults, setNumAdults] = useState('1');
     const [searchResult, setSearchResults] = useState(null);
 
-    const handleSearch = async (e) => {
+    const token = sessionStorage.getItem("jwt");
+
+    const handleSearch = (e) => {
         e.preventDefault();
         //handle  search based on criteria 
         console.log("search criteria: ", { departureCode, arrivalCode, departureDate, numAdults });
-        //add api request logic
 
         const apiUrl = `/apiflights/${departureCode}/${arrivalCode}/${departureDate}/${numAdults}/2`;
 
-        try {
-            const response = await fetch(apiUrl);
-            const data = await response.json();
-
+        fetch(apiUrl, {
+            headers: {'Authorization' : token}
+        })
+        .then(response => response.json())
+        .then(data => {
             setSearchResults(data);
-        } catch (error) {
-            console.log("error fetching data: ", error);
+        })
+        .catch(err => console.log("error fetching data: ", err));
         }
-    };
+
 
     return (
         <div>
