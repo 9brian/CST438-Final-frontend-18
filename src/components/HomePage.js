@@ -36,7 +36,7 @@ const HomePage = () => {
                     placeholder='LAX'
                     value={departureCode}
                     onChange={(e) => setDepartureCode(e.target.value)}
-                    Required 
+                    required 
                 />
                 <br></br>
                 <label htmlFor='arrivalCode'>Arrival Airport Code:    </label>
@@ -47,7 +47,7 @@ const HomePage = () => {
                     placeholder='JFK'
                     value={arrivalCode}
                     onChange={(e) => setArrivalCode(e.target.value)}
-                    Required
+                    required
                 />
                 <br></br>
                 <label htmlFor='departureDate'> Departure Date:    </label>
@@ -57,7 +57,7 @@ const HomePage = () => {
                     name='departureDate'
                     value={departureDate}
                     onChange={(e) => setDepartureDate(e.target.value)}
-                    Required
+                    required
                 />
                 <br></br>
                 <label htmlFor="numAdults">Number of Adults:   </label>
